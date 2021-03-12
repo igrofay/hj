@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_reg"
+    app:startDestination="@id/nameFragment">
+
+    <fragment
+        android:id="@+id/nameFragment"
+        android:name="com.example.registr.ui.NameFragment"
+        android:label="fragment_name"
+        tools:layout="@layout/fragment_name" >
+        <action
+            android:id="@+id/action_nameFragment_to_sexFragment"
+            app:destination="@id/sexFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sexFragment"
+        android:name="com.example.registr.ui.SexFragment"
+        android:label="fragment_sex"
+        tools:layout="@layout/fragment_sex" >
+        <action
+            android:id="@+id/action_sexFragment_to_placeOfStudyFragment"
+            app:destination="@id/placeOfStudyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeOfStudyFragment"
+        android:name="com.example.registr.ui.PlaceOfStudyFragment"
+        android:label="fragment_place_of_study"
+        tools:layout="@layout/fragment_place_of_study" >
+        <action
+            android:id="@+id/action_placeOfStudyFragment_to_optionalDataFragment"
+            app:destination="@id/optionalDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionalDataFragment"
+        android:name="com.example.registr.ui.OptionalDataFragment"
+        android:label="fragment_optional_data"
+        tools:layout="@layout/fragment_optional_data" />
+</navigation>
